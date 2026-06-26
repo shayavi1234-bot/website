@@ -1,0 +1,784 @@
+﻿/* עיצוב כללי לאתר */
+body {
+    direction: rtl;
+    font-family: 'Rubik', sans-serif;
+    background-color: #fdfbf7;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 80px;
+    width: 100%;
+}
+/* רקע עמוד הפתיחה */
+body.homepage{
+    background-image: url('../photos/bread-background.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* רקע עמוד מפת האתר */
+body.mapPage{
+    background-image: url('../photos/breadMap1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* עיצוב קישורים לא פעילים */
+.notActive{
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+/* תפריט עליון ראשי */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #3e2723;
+    text-align: center;
+    font-size: 14px;
+    min-height: 70px;
+}
+
+.main-nav > ul > li {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.main-nav a {
+    display: block;
+    padding: 0 24px;
+    color: #fff;
+    height: 70px;
+    line-height: 70px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav > ul > li > a:hover {
+    background-color: #5d4037;
+}
+
+/* הלוגו */
+.main-nav ul .logo-link {
+    position: absolute;
+    right: 2%;
+    padding: 0;
+}
+
+.main-nav ul .logo-link a:hover{
+    background-color: transparent;
+}
+
+.nav-logo {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+.main-nav ul .nav-contact {
+    position: absolute;
+    left: 2%;
+    top: 0;
+}
+.main-nav ul .nav-shopping{
+    position: absolute;
+    left: 8%;
+    top: 0;
+}
+
+#shopping-cart {
+    width: 25px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/*  תת-תפריט מוצרים נפתח (Dropdown) */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #3e2723;
+    min-width: 105px;
+    z-index: 100;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.main-nav ul li:hover .dropdown {
+    display: block;
+}
+
+.dropdown a {
+    text-align: center;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.dropdown a:hover {
+    background-color: #6d4c41;
+}
+
+/* תפריט תחתון (Footer)  */
+footer {
+    padding: 5px 0 5px 5px;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+    width: 600px;
+    margin: 0 auto 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer a {
+    display: inline-block;
+    margin: 0 15px;
+    color: #5d4037;
+    text-decoration: none;
+    font-size: 16px;
+}
+footer a:hover {
+    text-decoration: underline;
+    color: #3e2723;
+}
+.footer-spike {
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    width: auto;
+}
+
+.breadcrumbsMenu ol a {
+    text-decoration: none;
+    color: #5d4037;
+}
+
+.breadcrumbsMenu ol a:hover{
+    text-decoration: underline;
+    color: #3e2723;
+    font-weight: 600;
+}
+.breadcrumbsMenu ol li {
+    display: inline-block;
+    color: #5d4037;
+}
+.breadcrumbsMenu ol li:after {
+    content: '>';
+}
+.breadcrumbsMenu ol li:last-child:after {
+    content: '';
+}
+
+/*  תוכן העמוד פתיחה */
+.openPage {
+    text-align: center;
+}
+
+.openPage h1 {
+    font-size: 100px;
+    font-family: "Gveret Levin", cursive;
+    font-weight: 500;
+    font-style: normal;
+    color: #62382B;
+    margin-bottom: 90px;
+    text-shadow: 1px 1px 2px rgba(18, 10, 8, 0.9);
+}
+
+.openPage p {
+    font-size: 24px;
+    font-weight: 500;
+    max-width: 600px;
+    margin: 20px auto;
+    color: #5d4037;
+    line-height: 1.6;
+}
+.openPage p:nth-child(3) {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/* עיצוב הכפתור בפתיחה */
+.cta-button {
+    display: inline-block;
+    background-color: #62382B;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 35px;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+}
+
+.cta-button:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3)
+}
+
+/* עיצוב הכותרות הראשונות ברוב העמודים  */
+#productsPage h1, #aboutPage h1, #siteMap h1, #ourStoryPage h1, .contact-page-container h1, #crackersPage h1{
+    text-align: center;
+    font-size: 64px;
+    font-family: "Gveret Levin", cursive;
+    font-weight: 500;
+    color: #62382B;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+    line-height: 0.5;
+    letter-spacing: 3px;
+}
+/*עיצוב הפסקאות של עמוד המוצרים ועמוד הקרקרים */
+#productsPage > p, #crackersPage > p{
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 1000px;
+    margin: 20px auto;
+    color: #5d4037;
+    line-height: 1.4;
+    text-align: center;
+}
+/* עיצוב התמונות וקטגוריות המוצרים */
+#products-container {
+    display: block;
+    text-align: center;
+    margin: 40px auto;
+}
+
+#products-container .image-box{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 15px 30px 15px;
+    width: 230px;
+    height: 230px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+#products-container .image-box p{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px auto;
+    text-decoration: none;
+    color: #3e2723;
+}
+
+.productsPhotos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.image-box:hover .productsPhotos {
+    transform: scale(1.3);
+}
+
+/*עיצוב כותרות h2 בחלק מהעמודים */
+#aboutPage h2, #ourStoryPage h2{
+    text-align: right;
+    font-size: 36px;
+    font-family: "Gveret Levin", cursive;
+    font-weight: 500;
+    color: #62382B;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+    line-height: 0.5;
+    margin-right: 10%;
+    letter-spacing: 3px;
+}
+/*עיצוב פסקאות בחלק מהעמודים */
+
+.goalSite div p, #ourStoryPage section p{
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 700px;
+    margin: 0 10% 0 15%;
+    color: #5d4037;
+    line-height: 1.4;
+    text-align: right;
+}
+
+/*עיצוב עמוד האודות - התמונות- הקישורים */
+#aboutPage>img{
+    height: 400px;
+    width: 400px;
+    float: left;
+    border-radius: 200px;
+    margin: 0 0 0 120px;
+    object-fit: cover;
+    box-shadow : 0 4px 4px rgba(0,0,0,0.4);
+}
+.goalSite ul {
+    list-style: none;      
+    padding: 0;
+    margin: 0 150px;        
+    line-height: 1.4;
+    text-align: right;
+}
+
+.goalSite ul li {
+    margin: 10px 0;
+    padding-right: 60px;
+    background-image: url("../photos/wheaR.png"); 
+    background-repeat: no-repeat;
+    background-position: right center;     
+    background-size: 55px auto;               
+}
+
+.goalSite ul li a, #siteMap ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #5d4037;
+    margin: 10px;
+}
+.goalSite ul li:nth-child(odd) a{
+    color: #dfd1a0
+}
+.goalSite ul li a:hover {
+    font-weight: 500;
+    text-decoration: underline;
+}
+.goalSite ul li:nth-child(odd) a:hover{
+    color: #5d4037
+}
+.goalSite ul li:nth-child(even) a:hover{
+    color: #dfd1a0
+}
+
+#hit-logo-telem {
+    text-align: center;
+    padding: 10px;
+}
+#hit-logo-telem a{
+    text-decoration: none;
+    font-family: "Gveret Levin", cursive;
+    font-size: 24px;
+    display: inline-block;
+    color: #5d4037;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease;
+}
+#hit-logo-telem a:hover {
+    text-decoration: underline dotted;
+    text-underline-offset: 8px;
+}
+
+#hit-logo-telem img{
+    width: 200px;
+    margin: 20px 0 0 0;
+}
+
+/*עיצוב הטיפ בעמוד מהמוצרים */
+.minimal-tip {
+    background-color: #f5f2eb;
+    border-left: 4px solid #62382B;
+    border-right: 4px solid #62382B;
+    padding: 15px 25px;
+    margin: 25px auto;
+    max-width: 500px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.minimal-tip h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #3e2723;
+    font-size: 18px;
+    font-family: "Gveret Levin", cursive;
+}
+
+.minimal-tip p {
+    margin: 0;
+    color: #5d4037;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/*עיצוב עמוד המפת האתר */
+#siteMap > ul {
+    list-style: none;
+    padding: 0;
+    margin: 150px 0;
+    text-align: center;
+}
+
+#siteMap > ul > li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    width: auto;
+}
+
+#siteMap ul li a {
+    font-size: 22px;
+    font-weight: bold;
+    color: #62382B;
+    text-decoration: none;
+}
+
+#siteMap ul li a:hover {
+    text-decoration: underline;
+}
+
+#siteMap ul li ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    text-align: right;
+    width: 100%;
+}
+
+#siteMap ul li ul li {
+    margin: 8px 0;
+    display: block;
+}
+
+#siteMap ul li ul li a{
+    font-size: 18px;
+    font-weight: normal;
+    color: #5d4037;
+}
+
+/*עיצוב הציטוט בעמוד המוצרים */
+.story-highlight {
+    font-family: "Gveret Levin", cursive;
+    font-size: 20px;
+    color: #62382B;
+    background-color: #f5f2eb;
+    border-right: 4px solid #62382B;
+    border-left: 4px solid #62382B;
+    max-width: 45%;
+    margin: 30px 10%;
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/*עיצוב עמוד הסיפור שלנו */
+#ourStoryPage .story-content img{
+    position: relative;
+    float: left;
+    width: 35%;
+    height: auto;
+    max-width: 350px;
+    margin: 10px 3% 20px 7%;
+    object-fit: cover;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.4);
+}
+
+#picsBakery{
+    display: block;
+    text-align: center;
+    margin: 60px auto 0 auto;
+    max-width: 95%;
+}
+#picsBakery .picsBakeryBox{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 15px 30px 25px;
+    width: 230px;
+    height: 230px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+#picsBakery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+#picsBakery img:hover{
+    transform: scale(1.3);
+}
+
+/*  עיצוב עמוד צור קשר  */
+#bigSection {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.contact-subtitle {
+    text-align: center;
+    color: #795548;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+/*עיצוב איזור צור הקשר */
+.contact-form-section {
+    width: 55%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+
+.contact-form-section fieldset {
+    border: 2px solid #d7ccc8;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #fdfbf7;
+}
+
+.contact-form-section legend {
+    color: #62382B;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #5d4037;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.required {
+    color: #d32f2f;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bcaaa4;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-size: 15px;
+    background-color: #fff;
+    color: #3e2723;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group textarea {
+    border-radius: 12px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #62382B;
+    box-shadow: 0 0 5px rgba(98, 56, 43, 0.2);
+}
+
+.submit-btn {
+    background-color: #62382B;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    float: left;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+    background-color: #4e2c22;
+}
+
+.submit-btn:active, .cta-button:active {
+    transform: scale(0.98);
+}
+
+/*  איזור המידע (צד ימין)  */
+.contact-info-section {
+    width: 40%;
+    float: right;
+    box-sizing: border-box;
+    margin-top: 3px;
+    padding-top: 5px;
+}
+
+.info-box {
+    background-color: #f5f2eb;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-right: 4px solid #62382B;
+    border-left: 4px solid #62382B;
+}
+
+.info-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #62382B;
+    font-size: 17px;
+}
+
+.info-box p {
+    margin: 5px 0;
+    color: #5d4037;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.info-box a {
+    color: #62382B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+}
+
+/* עיצוב טבלת שעות פתיחה */
+.opening-hours-table {
+    width: 100%;
+    font-size: 14px;
+    color: #5d4037;
+}
+
+.opening-hours-table td {
+    padding: 6px 0;
+}
+
+.opening-hours-table td:first-child {
+    font-weight: bold;
+    width: 45%;
+}
+.clear-fix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*עיצוב עמוד הקרקרים */
+#crackersSection {
+    max-width: 1300px;
+    margin: 40px auto;
+    text-align: center;
+    width: 95%;
+}
+
+#crackersSection .crackerBox{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px 40px 15px;
+    width: 280px;
+    height: 385px;
+    border: 1px solid #62382B;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: #fdfbf7;
+    position: relative;
+    z-index: 4;
+}
+
+.crackerImg {
+    margin: 15px auto 0 auto;
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.crackerBox .crackerImg:hover {
+    transform: scale(1.2);
+}
+
+.crackerImg-wrapper {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    text-align: center;
+}
+.cracker-info{
+    text-align: right;
+    margin:  auto 20px;
+    color: #5d4037;
+}
+.cracker-info p{
+    margin: 15px auto;
+    color: #000000;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.cracker-info p:last-child{
+    font-weight: bold;
+    font-size: 18px;
+    color: #5d4037;
+}
+
+
+.qty-input{
+    width: 30px;
+    height: 24px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #6d4c41;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: bold;
+    color: #6d4c41;
+    vertical-align: middle;
+}
+.btn{
+    color: #6d4c41;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.add-to-btn {
+    background-color: #6d4c41;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: 35px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.add-to-btn:hover {
+    background-color: #3e2723;
+}
+
+.add-to-btn:active, .btn:active {
+    transform: scale(0.96);
+}
+#crackersPage>img{
+    border: 10px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    width: 300px;
+    height: auto;
+    opacity: 0.25;
+    position: absolute;
+}
+
+#crackersPage{
+    overflow: hidden;
+    position: relative;
+}
+#imgA{
+    top: 2%;
+    transform: rotate(105deg);
+    z-index: 1;
+}
+#imgB{
+    bottom: 5%;
+    left: 1%;
+    transform: rotate(15deg);
+    z-index: 1;
+}
